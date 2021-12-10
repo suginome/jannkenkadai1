@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>＿</title>
+</head>
+<body>
+
+<header>
+  <h1>レシピ</h1>
+</header>
+
+<main>
+  <ul>
+    <li id="gu_btn">魚</li>
+    <li id="cho_btn">肉</li>
+    <li id="par_btn">野菜</li>
+  </ul>
+  <div class="dasite">調理方法は？？「<span id="pc_hands">なに？</span>」</div>
+  <div id="judgment">勝ち</div>
+</main>
+
+<footer></footer>
+<script>
+//じゃんけん用のSCRIPTを書いてください
+
+// グーボタン（魚）押した時
+$("#gu_btn").on("click",function(){
+let num = Math.ceil(Math.random()*3)
+
+console.log(num)
+
+if(num == 1){
+  
+  $("#pc_hands").html('<img src="img/フライパン.jpeg"="フライパン">');
+  $("#judgment").html("煮付け"); 
+
+  $("#judgment").click(function() {
+    if (confirm('ページ遷移しますか？')) {
+      window.location.href = 'https://www.youtube.com/watch?v=U0TPu0ch-2w'}
+  });
+  
+
+
+
+}else if (num == 2){
+  $("#pc_hands").html('<img src="img/焼き網.jpg"="網">');
+  $("#judgment").html("焼魚")
+}else if (num == 3){
+  $("#pc_hands").html('<img src="img/鍋.jpeg"="鍋">');
+  $("#judgment").html("フィッシュカレー")
+}});
+
+
+// チョキボタン押した時
+$("#cho_btn").on("click",function(){
+  let num = Math.ceil(Math.random()*3)
+
+if(num == 1){
+  $("#pc_hands").html('<img src="img/フライパン.jpeg"="フライパン">');
+  $("#judgment").html("ステーキ")
+}else if (num == 2){
+  $("#pc_hands").html('<img src="img/焼き網.jpg"="網">');
+  $("#judgment").html("バーベキュー")
+}else if (num == 3){
+  $("#pc_hands").html('<img src="img/鍋.jpeg"="鍋">');
+  $("#judgment").html("カレー")
+}});
+
+
+// パー押した時
+$("#par_btn").on("click",function(){
+  let num = Math.ceil(Math.random()*3)
+  
+if(num === 1){
+  $("#pc_hands").html('<img src="img/フライパン.jpeg"="フライパン">');
+  $("#judgment").html("炒め物")
+}else if (num == 2){
+  $("#pc_hands").html('<img src="img/焼き網.jpg"="網">');
+  $("#judgment").html("網焼き")
+}else if (num == 3){
+  $("#pc_hands").html('<img src="img/鍋.jpeg"="鍋">');
+  $("#judgment").html("スープ")
+}});
+
+
+
+
+</script>
+</body>
+</html>
